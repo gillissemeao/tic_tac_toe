@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toee/src/pages/widgets/tray_game.dart';
-import 'package:tic_tac_toee/src/pages/widgets/type_house.dart';
+import 'package:tic_tac_toee/src/widgets/tray_game.dart';
+import 'package:tic_tac_toee/src/widgets/type_house.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

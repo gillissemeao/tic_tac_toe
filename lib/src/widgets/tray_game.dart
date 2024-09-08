@@ -1,4 +1,4 @@
-import 'package:tic_tac_toee/src/pages/widgets/type_house.dart';
+import 'package:tic_tac_toee/src/widgets/type_house.dart';
 
 class TrayGame {
   var cardHouse = List<TypeHouse>.filled(9, TypeHouse.empty);
