@@ -35,7 +35,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    //media query
     final height = MediaQuery.sizeOf(context).height * 0.1;
     final width = MediaQuery.sizeOf(context).width * 0.8;
 
@@ -55,12 +54,11 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            //Titulo do Game
             "TIC TAC TOE",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 23,
+              fontSize: 33,
             ),
           ),
           backgroundColor: Colors.black,
@@ -72,7 +70,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Jogador 01 \nX",
+                  "Player 01 \nX",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28,
@@ -81,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                   textAlign: TextAlign.center,
                 ),
                 Text(
-                  "Jogador 02 \nO",
+                  "Player 02 \nO",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28,
@@ -94,7 +92,7 @@ class _HomePageState extends State<HomePage> {
             Align(
               //Pra verificar a vez do jogador
               child: Text(
-                "Agora é a vez do: ${trayGame.currentTurn == TypeHouse.O ? " X" : " O"}",
+                "Now it's the turn of: ${trayGame.currentTurn == TypeHouse.O ? " X" : " O"}",
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 28,
@@ -147,16 +145,16 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 10),
             if (winner) //Para mostrar quem venceu
               Text(
-                "O Vencedor é: ${trayGame.currentTurn == TypeHouse.X ? "X" : "O"}",
+                "The Winner is: ${trayGame.currentTurn == TypeHouse.X ? "X" : "O"}. Congratulations!",
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 30,
+                  fontSize: 33,
                   fontWeight: FontWeight.bold,
                 ),
               )
             else if (gameOver)
               const Text(
-                "Empate!",
+                "Draw!",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
@@ -182,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                   TextButton.icon(
                     onPressed: clearHouse,
                     icon: const Icon(
-                      Icons.replay_outlined,
+                      Icons.replay_circle_filled,
                       size: 55,
                     ),
                     label: const Text(
